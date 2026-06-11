@@ -1,7 +1,7 @@
 import streamlit as st
 from pymongo import MongoClient
 
-MONGO_URI = "mongodb+srv://Joystick2:Olaf11022002XD5@clusterjoystick2.hajswhe.mongodb.net/?appName=ClusterJoystick2"
+MONGO_URI = st.secrets["MONGO_URI"]
 
 client = MongoClient(MONGO_URI)
 db = client["sample_airbnb"]
